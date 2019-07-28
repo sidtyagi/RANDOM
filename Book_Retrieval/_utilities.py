@@ -1,5 +1,3 @@
-import pickle
-
 books =[
     {
         'name': "AAA",
