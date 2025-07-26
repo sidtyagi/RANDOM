@@ -1,0 +1,398 @@
+{
+  "name": "vxlan-ebgp-multias",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-a6c4e8ea04b4",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJUtrEzraO2P2VzOtja3NZkdhi8KoVWDEbMyUmFW07mhdP8Y/Y38rpZTTmEDWCwCaSGDeaHGhLiyFr7mqbFAkvY="],
+  "nodes": {
+    "host1": {
+      "index": "0",
+      "shortname": "host1",
+      "longname": "clab-vxlan-ebgp-multias-host1",
+      "fqdn": "host1.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/host1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.101",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/host1",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-host1",
+        "clab-node-name": "host1",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "host2": {
+      "index": "1",
+      "shortname": "host2",
+      "longname": "clab-vxlan-ebgp-multias-host2",
+      "fqdn": "host2.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/host2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.102",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/host2",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-host2",
+        "clab-node-name": "host2",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "host3": {
+      "index": "2",
+      "shortname": "host3",
+      "longname": "clab-vxlan-ebgp-multias-host3",
+      "fqdn": "host3.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/host3",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.103",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/host3",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-host3",
+        "clab-node-name": "host3",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf1": {
+      "index": "3",
+      "shortname": "leaf1",
+      "longname": "clab-vxlan-ebgp-multias-leaf1",
+      "fqdn": "leaf1.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/leaf1",
+      "kind": "ceos",
+      "image": "ceos:4.34.1F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.21",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:08:32:48",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/leaf1",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-leaf1",
+        "clab-node-name": "leaf1",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf2": {
+      "index": "4",
+      "shortname": "leaf2",
+      "longname": "clab-vxlan-ebgp-multias-leaf2",
+      "fqdn": "leaf2.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/leaf2",
+      "kind": "ceos",
+      "image": "ceos:4.34.1F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.22",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:f9:e3:ff",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/leaf2",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-leaf2",
+        "clab-node-name": "leaf2",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "leaf3": {
+      "index": "5",
+      "shortname": "leaf3",
+      "longname": "clab-vxlan-ebgp-multias-leaf3",
+      "fqdn": "leaf3.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/leaf3",
+      "kind": "ceos",
+      "image": "ceos:4.34.1F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.23",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:f3:31:c2",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/leaf3",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-leaf3",
+        "clab-node-name": "leaf3",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine1": {
+      "index": "6",
+      "shortname": "spine1",
+      "longname": "clab-vxlan-ebgp-multias-spine1",
+      "fqdn": "spine1.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/spine1",
+      "kind": "ceos",
+      "image": "ceos:4.34.1F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:ae:3c:7c",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/spine1",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-spine1",
+        "clab-node-name": "spine1",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    },
+    "spine2": {
+      "index": "7",
+      "shortname": "spine2",
+      "longname": "clab-vxlan-ebgp-multias-spine2",
+      "fqdn": "spine2.vxlan-ebgp-multias.io",
+      "group": "",
+      "labdir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/spine2",
+      "kind": "ceos",
+      "image": "ceos:4.34.1F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:b0:c9:b3",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-a6c4e8ea04b4",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/clab/TiP/containerlab_playground/clab-vxlan-ebgp-multias/spine2",
+        "clab-node-longname": "clab-vxlan-ebgp-multias-spine2",
+        "clab-node-name": "spine2",
+        "clab-node-type": "",
+        "clab-owner": "clab",
+        "clab-topo-file": "/home/clab/TiP/containerlab_playground/clab-topology.yml",
+        "containerlab": "vxlan-ebgp-multias"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "spine1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:52:48:63",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:59:24:77",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "spine1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:28:55:d0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:63:d8:b6",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "spine1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:24:31:d4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e3:1b:bf",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "spine2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:af:db:b7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:8f:c2:58",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "spine2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:57:1b:78",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:33:e6:d2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "spine2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:15:78:31",
+        "peer": "z"
+      },
+      "z": {
+        "node": "leaf3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e4:82:81",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:cf:8f:ff",
+        "peer": "z"
+      },
+      "z": {
+        "node": "host1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ec:fe:ca",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:84:60:eb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "host2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:46:14:96",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "leaf3",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:86:f5:1a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "host3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d7:13:cb",
+        "peer": "a"
+      }
+    }
+  ]
+}
